@@ -7,6 +7,12 @@
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+   "builds": [
+    { "src": "index.js", "use": "@now/node" }
+],
+"routes": [
+    { "src": "/(.*)", "dest": "index.js" }
+],
   "author": "",
   "license": "ISC",
   "dependencies": {
