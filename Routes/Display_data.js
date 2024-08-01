@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router()
 
-router.post('/foodData',(req,res)=>{
+router.get('/foodData',(req,res)=>{
     try{
 
         const result = mongoose.connection.db.collection("Food_items");
