@@ -60,6 +60,7 @@ router.post(
     const email = req.body.email;
     try {
       let userData = await user.findOne({email});
+      console.log(userData);
       if(!userData){
         return res.status(400).json({error:"Enter Correct Credentials"});
       }
